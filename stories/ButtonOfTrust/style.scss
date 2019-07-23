@@ -1,0 +1,40 @@
+@import 'vars.scss';
+
+.button-of-trust {
+    width: 100%;
+    padding: 0.5rem 0;
+    border: 3px solid $white;
+    margin: 1rem 0;
+    background: $primary-color;
+    border-radius: 0;
+    color: $white;
+    transition: border-radius 0.25s;
+
+    &:active {
+        background: white;
+        border-radius: 20px;
+        color: $primary-color;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        border-radius: 10px;
+    }
+
+    &:disabled {
+        border-color: $black;
+        color: $black;
+        transition: none;
+
+        &:hover {
+            border-radius: initial;
+        }
+    }
+
+    &:hover:not(:disabled) {
+        cursor: pointer;
+    }
+}
