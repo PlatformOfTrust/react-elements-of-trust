@@ -1,8 +1,8 @@
-### React elements of Trust
+# React elements of Trust
 
 UI library of react components for PoT. 
 
-#### Install
+## Install
 
 !NOTE: Recommended `node` version is `10.16.0`. Use `nvm` to manage versions. 
 
@@ -11,7 +11,7 @@ npm install yarn -g
 yarn install
 ```
 
-### Development
+## Development
 
 Start [Storybook](https://storybook.js.org/) for UI development
 
