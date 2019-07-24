@@ -6,6 +6,7 @@
     "license": "MIT",
     "private": false,
     "dependencies": {
+        "@storybook/addon-backgrounds": "5.1.9",
         "@storybook/react": "5.1.9",
         "bootstrap": "4.3.1",
         "react": "16.8.6",

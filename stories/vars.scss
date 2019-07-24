@@ -7,7 +7,7 @@
 
 */
 
-$body-bg: #f0f8ff;
+$body-bg: transparent;
 $primary: #372873;
 
 @import '~bootstrap/scss/bootstrap.scss';
@@ -28,6 +28,10 @@ $bp-large: 1200px;
 $primary-color: #7955ff;
 $secondary-color: #007bff;
 $primary-color-notice: #f7c500;
+
+$white: white;
+$black: black;
+$red: red;
 
 $warning: $red;
 
