@@ -1,29 +1,35 @@
 {
     "name": "react-elements-of-trust",
     "version": "0.1.0",
-    "description": "React components for PoT ",
+    "description": "React components for PoT",
     "repository": "git@github.com:PlatformOfTrust/react-elements-of-trust.git",
     "license": "MIT",
+    "main": "dist/bundle.js",
     "private": false,
-    "dependencies": {
-        "@storybook/addon-backgrounds": "5.1.9",
-        "@storybook/react": "5.1.9",
-        "bootstrap": "4.3.1",
-        "react": "16.8.6",
-        "react-bootstrap": "1.0.0-beta.9",
-        "react-dom": "16.8.6"
-    },
     "devDependencies": {
+        "react": "16.8.6",
+        "bootstrap": "4.3.1",
+        "react-bootstrap": "1.0.0-beta.9",
+        "react-dom": "16.8.6",
+        "@storybook/react": "5.1.9",
+        "@storybook/addon-backgrounds": "5.1.9",
         "@babel/core": "7.5.5",
+        "@babel/preset-env": "7.5.5",
         "@babel/preset-flow": "7.0.0",
         "babel-loader": "8.0.6",
         "flow-bin": "0.103.0",
         "flow-webpack-plugin": "1.2.0",
         "node-sass": "4.12.0",
+        "rollup": "1.17.0",
+        "rollup-plugin-babel": "4.3.3",
+        "rollup-plugin-copy-glob": "0.3.1",
+        "rollup-plugin-flow": "1.1.1",
+        "rollup-plugin-scss": "1.0.1",
         "sass-loader": "7.1.0"
     },
     "scripts": {
         "start": "start-storybook",
-        "build": "build-storybook -c .storybook -o .out"
+        "build": "rollup -c rollup.config.js",
+        "build-storybook": "build-storybook -c .storybook -o .out"
     }
 }

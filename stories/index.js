@@ -1,7 +1,9 @@
+import './index.scss';
 import React from 'react';
+
 import {storiesOf} from '@storybook/react';
 
-import Button from 'Button/component';
+import Button from './../src/Components/Button/component';
 
 storiesOf('Button', module).addParameters({
     backgrounds: [
@@ -10,5 +12,5 @@ storiesOf('Button', module).addParameters({
         { name: 'purple', value: '#7955ff', default: true }
     ],
 }).add('default', () => (
-    <Button text="hello"/>
+    <Button text="Hello World!"/>
 ));

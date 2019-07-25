@@ -1,8 +1,9 @@
 [ignore]
 .*/node_modules/.*
+rollup.config\.js
 
 [include]
-stories/**/**.js
+src/**/**.js
 
 [libs]
 

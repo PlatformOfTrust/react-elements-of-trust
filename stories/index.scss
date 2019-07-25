@@ -1,16 +1,8 @@
-/*
-    OVERWRITE BOOTSTRAP DEFAULTS
-
-    Check node_modules/bootstrap/scss/_variables.scss
-
-    $body-bg: #f0f8ff;
-
-*/
-
 $body-bg: transparent;
 $primary: #372873;
 
 @import '~bootstrap/scss/bootstrap.scss';
+@import './../src/main.scss';
 
 /* DEFAULT SIZE */
 $SIZE: 1rem;
@@ -28,10 +20,6 @@ $bp-large: 1200px;
 $primary-color: #7955ff;
 $secondary-color: #007bff;
 $primary-color-notice: #f7c500;
-
-$white: white;
-$black: black;
-$red: red;
 
 $warning: $red;
 
@@ -57,3 +45,4 @@ $fs-default: $fs-value * $fs-scale;
 /* PADDING AND MARGIN */
 $padding-vertical: $PADDING 0;
 $padding: $PADDING $PADDING * 2;
+

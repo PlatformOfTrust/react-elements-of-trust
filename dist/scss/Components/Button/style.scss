@@ -1,0 +1,37 @@
+@import "./../../vars";
+
+.button-of-trust {
+    width: 100%;
+    padding: 0.5rem 0;
+    border: 3px solid $white;
+    margin: 1rem 0;
+    background: transparent;
+    border-radius: 0;
+    color: $white;
+    transition: border-radius 0.25s;
+
+    &:not(:disabled):not(.disabled):active,
+    &:active {
+        background: white;
+        border-radius: 10px;
+        color: $primary-color;
+        border-color: $white;
+    }
+
+    &:not(:disabled):not(.disabled):active:focus,
+    &:focus {
+        outline: none;
+        border-color: $white;
+        box-shadow: none;
+    }
+
+    &:hover {
+        border-color: $white;
+        border-radius: 10px;
+        background: transparent;
+    }
+
+    &:hover:not(:disabled) {
+        cursor: pointer;
+    }
+}
