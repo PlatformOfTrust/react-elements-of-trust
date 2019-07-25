@@ -83,6 +83,10 @@ Done!
 
 Now each ime you build your local `react-elements-of-trust` with `npm run build`. New `bundle.js` and all `scss` files will be used within your app.
 
+## Linting
+
+Run `npm run lint` and `npm run format` before committing.
+
 ### Flow.js
 
 It is important to run flow. js, while developing components. Webpack runs flow on each code update, however it might be easier for somebody to run it manually: 

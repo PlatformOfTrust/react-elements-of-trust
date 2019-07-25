@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
-import {Button as Base} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Button as Base } from 'react-bootstrap';
 
 type ButtonProps = {
-    text: string;
-    disabled?: boolean;
-}
+    text: string,
+    disabled?: boolean
+};
 
-class Button extends Component <ButtonProps> {
+class Button extends Component<ButtonProps> {
     render() {
         return (
-            <Base {...this.props}
-                  className="button-of-trust">{this.props.text}</Base>
+            <Base {...this.props} className="button-of-trust">
+                {this.props.text}
+            </Base>
         );
     }
 }
