@@ -5,7 +5,7 @@ UI library of react components for PoT.
 
 ## Install
   
-```
+```bash
 npm install --save https://github.com/PlatformOfTrust/react-elements-of-trust react-bootstrap react   
 ```
 
@@ -13,14 +13,14 @@ npm install --save https://github.com/PlatformOfTrust/react-elements-of-trust re
 
 Import scss
 
-```
+```scss
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~react-elements-of-trust/dist/scss/main.scss';
 ```
 
 Use React components:
 
-```
+```js
 import {Button} from 'react-elements-of-trust';
 ```
 
@@ -33,7 +33,7 @@ For those who want to help with developing of PoT components.
 
 !NOTE: Recommended `node` version is `10.16.0`. Use `nvm` to manage versions. 
 
-```
+```bash
 npm install yarn -g
 yarn install
 ```
@@ -42,7 +42,7 @@ yarn install
 
 Start [Storybook](https://storybook.js.org/) for UI development
 
-```
+```bash
 npm start
 ```
 
@@ -51,7 +51,7 @@ npm start
 
 Build with rollup
 
-```
+```bash
 npm run build
 ```
 
@@ -64,7 +64,7 @@ There are 2 things to be done:
 
 Go to your project root folder (with package.json). `cd <YOUR_PROJECT_ROOT>`
 
-```
+```bash
 npm install /absolute/path/to/react-elements-of-trust --save 
 ```
 
@@ -75,7 +75,7 @@ _(relative path works as well)_
 
 Go to `/absolute/path/to/react-elements-of-trust` folder with `package.json`
 
-```
+```bash
 npm link /absolute/path/to/<YOUR_PROJECT_ROOT>/node_modules/react 
 ```
 
@@ -91,7 +91,7 @@ Run `npm run lint` and `npm run format` before committing.
 
 It is important to run flow. js, while developing components. Webpack runs flow on each code update, however it might be easier for somebody to run it manually: 
 
-```
+```bash
 yarn flow
 ```
 
