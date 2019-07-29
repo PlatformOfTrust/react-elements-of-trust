@@ -3,9 +3,6 @@
 > This file contains color schemes for Platform of Trust UI Elements. This color scheme should be followed while designing new elements and updating existing ones.
 
 
-The usage of identity asset of *Platform of Trust Oy*, including *UI color schemes*, any *single color* or *any combination of colors* under the `/colors` path is restricted and can only be used with express written consent.
-
-
 ## Colors for Dark and Light Backgrounds
 
 1. Dark Background Color: *#7955FF*
