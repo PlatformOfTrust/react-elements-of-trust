@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+## License
+
+1. The usage of identity assets of *Platform of Trust Oy*, including *UI color schemes*, any *single color* or *any combination of colors* (under `/colors`);
+*corporate images* and *logos* (`*.jpeg`, `*.jpg`, `*.png`, `*.svg`, etc.); *information* about the organization (`*.doc`, `*.docx`, `*.odt`, `*.pdf`, `*.ppt`,
+`*.pptx`, `*.pps`, `*.txt`, etc.); etc. is restricted and can be used only with express written consent from *Platform Of Trust Oy*.
+
+2. The usage of assets of types `.js` and `.scss` in `src` folder is licensed under MIT.
