@@ -22,6 +22,8 @@ Use React components:
 
 ```js
 import {Button} from 'react-elements-of-trust';
+import {Tabs} from 'react-elements-of-trust';
+import {Tab} from 'react-elements-of-trust';
 ```
 
 
