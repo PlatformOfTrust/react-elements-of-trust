@@ -2,20 +2,16 @@ import React, { Component } from 'react';
 
 import './styles.scss';
 
-class HexImg extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            url: this.props.url,
-            scale: this.props.scale,
-            rotate: '10deg'
-        };
-    }
+type HexImgProps = {
+    url: string,
+    scale: string
+};
 
+class HexImg extends Component<HexImgProps> {
     render() {
         const imgStyle = {
-            backgroundImage: `url(${this.state.url})`,
-            transform: `rotate(${this.state.rotate}) scale(${this.state.scale})`
+            backgroundImage: `url(${this.props.url})`,
+            transform: `rotate(10deg) scale(${this.props.scale})`
         };
         return (
             <div className="hexagon" style={imgStyle}>
