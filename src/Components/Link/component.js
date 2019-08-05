@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 
-class Links extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            label: this.props.label,
-            linkTo: this.props.linkTo,
-            target: '_self'
-        };
-    }
+type LinkProps = {
+    label: string,
+    linkTo: string
+};
+
+type LinkState = {
+    target: string
+};
+
+class Links extends Component<LinkProps, LinkState> {
+    state = {
+        target: '_self'
+    };
 
     componentWillMount() {
         if (this.props.target) {
@@ -21,7 +25,7 @@ class Links extends Component {
     render() {
         return (
             <a target={this.state.target} href={this.props.linkTo}>
-                {this.state.label}
+                {this.props.label}
             </a>
         );
     }
