@@ -10,9 +10,7 @@ type FormProps = {
     placeholder?: string
 };
 
-
 class FormGroup extends Component<FormProps> {
-
     render() {
         return (
             <Form.Group controlId={this.props.controlId}>
