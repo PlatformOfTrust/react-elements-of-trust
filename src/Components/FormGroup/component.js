@@ -24,7 +24,6 @@ class FormGroup extends Component<FormProps> {
 
                 <Form.Text className="text-muted">
                     {this.props.muted !== undefined ? this.props.muted : ''}
-                    {/* why cant we use null? */}
                 </Form.Text>
             </Form.Group>
         );
