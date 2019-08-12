@@ -10,24 +10,8 @@ type LinkState = {
 };
 
 class Links extends Component<LinkProps, LinkState> {
-    state = {
-        target: '_self'
-    };
-
-    componentWillMount() {
-        if (this.props.target) {
-            this.setState({
-                target: '_blank'
-            });
-        }
-    }
-
     render() {
-        return (
-            <a target={this.state.target} href={this.props.linkTo}>
-                {this.props.label}
-            </a>
-        );
+        return <a {...this.props}>{this.props.label}</a>;
     }
 }
 
