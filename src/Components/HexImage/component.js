@@ -11,7 +11,7 @@ class HexImg extends Component<HexImgProps> {
     render() {
         const imgStyle = {
             backgroundImage: `url('${this.props.url}')`,
-            transform: `rotate(10deg) scale(${this.props.scale})`,
+            transform: `rotate(10deg) scale(${this.props.scale})`
         };
         return (
             <div className="hexagon" style={imgStyle}>
