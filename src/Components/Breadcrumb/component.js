@@ -7,9 +7,13 @@ type BreadState = {
 };
 
 class Breadcrumbs extends Component<BreadState> {
-    state = {
-        items: []
-    };
+    constructor(props){
+        super(props);
+        this.state={
+            items: []
+        }
+    }
+    
 
     componentWillMount() {
         const location: string = window.location.pathname;
