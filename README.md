@@ -24,6 +24,7 @@ Use React components:
 import {Button} from 'react-elements-of-trust';
 import {Tabs} from 'react-elements-of-trust';
 import {Tab} from 'react-elements-of-trust';
+import {Image} from 'react-elements-of-trust';
 ```
 
 
