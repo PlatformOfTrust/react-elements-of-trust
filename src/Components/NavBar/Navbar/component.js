@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Nav from 'react-bootstrap/Nav';
 
-import { NavBarItem } from '../../NavBar/index';
+import { NavBarItem } from '../NavbarItem/component';
 
 type NavBarProps = {
     children: Array<NavBarItem>,
