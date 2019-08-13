@@ -4,6 +4,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 
 import Button from './../src/Components/Button/component';
+import Image from './../src/Components/Image/component';
 
 import NavBar from './../src/Components/NavBar/Navbar/component';
 import NavBarItem from './../src/Components/NavBar/NavbarItem/component';
