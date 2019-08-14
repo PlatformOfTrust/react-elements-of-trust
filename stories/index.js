@@ -35,5 +35,5 @@ storiesOf('Image', module).addParameters({
         { name: 'purple', value: '#7955ff', default: true }
     ],
 }).add('default', () => (
-    <Image src="https://i.pinimg.com/originals/aa/49/54/aa4954451f16847cb657e68e5f46538a.jpg"/>
+    <Image src={require('./test.png')}/>
 ));
