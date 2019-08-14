@@ -22,6 +22,7 @@ Use React components:
 
 ```js
 import {Button} from 'react-elements-of-trust';
+import {Image} from 'react-elements-of-trust';
 ```
 
 
