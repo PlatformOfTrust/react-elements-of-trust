@@ -38,14 +38,14 @@ storiesOf('HexImg', module)
         <div>
             <HexImg
                 url={
-                    'https://penasultra.com/wp-content/plugins/webp-express/test/test-pattern-tv.jpg'
+                    require('./../src/Components/Image/test.jpg')
                 }
                 scale={1}
             />
 
             <HexImg
                 url={
-                    'https://penasultra.com/wp-content/plugins/webp-express/test/test-pattern-tv.jpg'
+                    require('./../src/Components/Image/test.jpg')
                 }
                 scale={0.5}
             />
