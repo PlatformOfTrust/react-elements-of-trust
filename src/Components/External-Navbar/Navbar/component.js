@@ -16,9 +16,7 @@ class NavBar extends Component {
     render(): Node {
         return (
             <Nav
-                activeKey={this.props.activeKey}
-                defaultActiveKey={this.props.defaultActiveKey}
-                variant={this.props.variant}
+                {...this.props}
             >
                 {this.props.children}
             </Nav>
