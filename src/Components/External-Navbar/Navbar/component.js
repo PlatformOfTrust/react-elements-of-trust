@@ -4,13 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 
 import { NavBarItem } from '../NavbarItem/component';
 
-type NavBarProps = {
-    children: Array<NavBarItem>,
-    class?: String,
-    activeKey?: String,
-    defaultActiveKey?: String,
-    variant?: string
-};
 
 class NavBar extends Component {
     render(): Node {
