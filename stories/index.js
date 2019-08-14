@@ -38,14 +38,14 @@ storiesOf('HexImg', module)
         <div>
             <HexImg
                 url={
-                    require('./../src/Components/Image/test.jpg')
+                    require('./test.jpg')
                 }
                 scale={1}
             />
 
             <HexImg
                 url={
-                    require('./../src/Components/Image/test.jpg')
+                    require('./test.jpg')
                 }
                 scale={0.5}
             />
