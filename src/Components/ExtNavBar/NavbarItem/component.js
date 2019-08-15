@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Links from '../../Link/component';
 import Nav from 'react-bootstrap/Nav';
 
-class NavBarItem extends Component {
+class ExtNavBarItem extends Component {
     render(): Node {
         return (
             <Nav.Item>
@@ -12,4 +12,4 @@ class NavBarItem extends Component {
     }
 }
 
-export default NavBarItem;
+export default ExtNavBarItem;
