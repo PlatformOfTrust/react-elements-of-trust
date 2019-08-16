@@ -13,4 +13,16 @@ storiesOf('Breadcrumbs', module)
             { name: 'purple', value: '#7955ff', default: true }
         ]
     })
-    .add('default', () => <Breadcrumbs />);
+    .add('default', () => (
+        <div>
+            Without props <Breadcrumbs /> <br />
+            With props
+            <Breadcrumbs
+                items={[
+                    { label: 'label1', href: '/news' },
+                    { label: 'label2', href: '/cases' },
+                    { label: 'label3', href: '/events' }
+                ]}
+            />{' '}
+        </div>
+    ));
