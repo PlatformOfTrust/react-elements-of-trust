@@ -7,6 +7,8 @@ function loadStories() {
     require('../stories/ExternalNavbar.js');
     require('../stories/Navbar.js');
     require('../stories/FormGroup.js');
+    require('../stories/HexImage.js');
+    require('../stories/Image.js');
 }
 
 configure(loadStories, module);
