@@ -19,9 +19,8 @@ storiesOf('Breadcrumbs', module)
             With props
             <Breadcrumbs
                 items={[
-                    { label: 'label1', href: '/news' },
-                    { label: 'label2', href: '/cases' },
-                    { label: 'label3', href: '/events' }
+                    { label: 'Home', href: '/' },
+                    { label: 'iFrame', href: '/iframe.html' }
                 ]}
             />{' '}
         </div>

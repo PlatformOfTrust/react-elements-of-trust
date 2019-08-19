@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 type BreadProps = {
-    items: Array<Object>
+    items: Array<{ label: string, href: string }>
 };
 
 type BreadState = {
@@ -15,44 +14,45 @@ class Breadcrumbs extends Component<BreadProps, BreadState> {
     constructor(props) {
         super(props);
         this.state = {
-            labels: [],
-            links: []
+            items: []
         };
     }
 
     componentWillMount() {
         if (!this.props.items) {
-            const location = window.location.pathname;
-            const links = location.split('/');
-            const labels = links.map(item => {
-                let itemSplit = item.split('-').join(' ');
-                let capitalized = this.capitalizeFirstLetter(itemSplit);
-                return capitalized;
+            let items: Array<{ label: string, href: string }> = [];
+            const location: string = window.location.pathname;
+            let directory: string = '/';
+
+            const links = location.split('/').map((link, key) => {
+                let completeLink: string = directory + link;
+                return completeLink;
             });
 
+            const labels = location.split('/').map(item => {
+                let itemSplit: string = item.split('-').join(' ');
+                return itemSplit;
+            });
+
+            for (var i = 0; i < labels.length; i++) {
+                let item: { label: string, href: string } = {
+                    label: labels[i],
+                    href: links[i]
+                };
+                items.push(item);
+            }
+
             this.setState({
-                labels: labels,
-                links: links
+                items: items
             });
         } else {
-            let items = this.props.items;
-            const links = [];
-            const labels = [];
-            items.map((item, key) => {
-                let link = item.href;
-                let label = item.label;
-                links.push(link);
-                labels.push(label);
-                return links, labels;
-            });
             this.setState({
-                labels: labels,
-                links: links
+                items: this.props.items
             });
         }
     }
 
-    capitalizeFirstLetter(string: string) {
+    capitalizeFirstLetter(string: string): string {
         let result: string = string
             .split(' ')
             .map((word, key) => {
@@ -66,24 +66,22 @@ class Breadcrumbs extends Component<BreadProps, BreadState> {
     }
 
     render(): Node {
-        const labels: Array<string> = this.state.labels;
-        const links: Array<string> = this.state.links;
+        const items: Array<{ label: string, href: string }> = this.state.items;
 
-        let directory: string = '/';
         return (
             <Breadcrumb>
-                {labels.map((item, key) => {
-                    let index = labels.indexOf(item);
-                    directory = this.props.items
-                        ? String(links[index])
-                        : directory + String(links[index]);
-                    return index === labels.length - 1 ? (
+                {items.map((item, key) => {
+                    return items.indexOf(item) === items.length - 1 ? (
                         <Breadcrumb.Item active>
-                            {item === '' ? 'Home' : item}
+                            {item.label === ''
+                                ? 'Home'
+                                : this.capitalizeFirstLetter(item.label)}
                         </Breadcrumb.Item>
                     ) : (
-                        <Breadcrumb.Item href={directory}>
-                            {item === '' ? 'Home' : item}
+                        <Breadcrumb.Item href={String(item.href)}>
+                            {item.label === ''
+                                ? 'Home'
+                                : this.capitalizeFirstLetter(item.label)}
                         </Breadcrumb.Item>
                     );
                 })}
