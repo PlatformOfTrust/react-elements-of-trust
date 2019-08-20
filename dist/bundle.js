@@ -118,4 +118,76 @@ function (_Component) {
   return Button;
 }(React.Component);
 
+var Image =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Image, _Component);
+
+  function Image() {
+    _classCallCheck(this, Image);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Image).apply(this, arguments));
+  }
+
+  _createClass(Image, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(reactBootstrap.Image, _extends({}, this.props, {
+        className: "image-of-trust"
+      }));
+    }
+  }]);
+
+  return Image;
+}(React.Component);
+
+var Tab =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Tab, _Component);
+
+  function Tab() {
+    _classCallCheck(this, Tab);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Tab).apply(this, arguments));
+  }
+
+  _createClass(Tab, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(reactBootstrap.Tab, _extends({}, this.props, {
+        tabClassName: "tab-of-trust"
+      }));
+    }
+  }]);
+
+  return Tab;
+}(React.Component);
+
+var Tabs =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Tabs, _Component);
+
+  function Tabs() {
+    _classCallCheck(this, Tabs);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Tabs).apply(this, arguments));
+  }
+
+  _createClass(Tabs, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(reactBootstrap.Tabs, _extends({}, this.props, {
+        className: "tabs-of-trust"
+      }), this.props.children);
+    }
+  }]);
+
+  return Tabs;
+}(React.Component);
+
 exports.Button = Button;
+exports.Image = Image;
+exports.Tab = Tab;
+exports.Tabs = Tabs;
