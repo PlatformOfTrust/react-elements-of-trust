@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 
 import Nav from 'react-bootstrap/Nav';
 
-import { NavBarItem } from '../NavbarItem/component';
-
 type NavBarProps = {
-    children: Array<NavBarItem>
+    children: Array<>
 };
 
 class NavBar extends Component<NavBarProps> {

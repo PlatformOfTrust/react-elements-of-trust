@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import './styles.scss';
-
 type HexImgProps = {
     url: string,
     scale: string
