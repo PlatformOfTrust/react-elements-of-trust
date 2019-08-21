@@ -1,4 +1,4 @@
-import './index.scss';
+import './stories.scss';
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';

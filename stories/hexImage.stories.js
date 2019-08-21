@@ -1,4 +1,4 @@
-import './index.scss';
+import './stories.scss';
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
@@ -13,4 +13,4 @@ storiesOf('Image', module)
             { name: 'purple', value: '#7955ff', default: true }
         ]
     })
-    .add('default', () => <HexImg src={require('./test.jpg')} />);
+    .add('default', () => <HexImg src={require('./Images/test-image.jpg')} />);

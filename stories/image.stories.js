@@ -1,11 +1,11 @@
-import './index.scss';
+import './stories.scss';
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Links from './../src/Components/Link/component';
+import Image from './../src/Components/Image/component';
 
-storiesOf('Links', module)
+storiesOf('Image', module)
     .addParameters({
         backgrounds: [
             { name: 'light', value: '#fffef0' },
@@ -13,4 +13,4 @@ storiesOf('Links', module)
             { name: 'purple', value: '#7955ff', default: true }
         ]
     })
-    .add('default', () => <Links label={'This is a link'} href={'#'} />);
+    .add('default', () => <Image src={require('./Images/test-image.jpg')} />);

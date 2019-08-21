@@ -1,11 +1,11 @@
-import './index.scss';
+import './stories.scss';
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Button from './../src/Components/Button/component';
+import Links from './../src/Components/Link/component';
 
-storiesOf('Button', module)
+storiesOf('Links', module)
     .addParameters({
         backgrounds: [
             { name: 'light', value: '#fffef0' },
@@ -13,4 +13,4 @@ storiesOf('Button', module)
             { name: 'purple', value: '#7955ff', default: true }
         ]
     })
-    .add('default', () => <Button text="Hello World!" />);
+    .add('default', () => <Links label={'This is a link'} href={'#'} />);

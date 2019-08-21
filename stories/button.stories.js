@@ -1,11 +1,10 @@
-import './index.scss';
+import './stories.scss';
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 
-import Image from './../src/Components/Image/component';
+import Button from './../src/Components/Button/component';
 
-storiesOf('Image', module)
+storiesOf('Button', module)
     .addParameters({
         backgrounds: [
             { name: 'light', value: '#fffef0' },
@@ -13,4 +12,4 @@ storiesOf('Image', module)
             { name: 'purple', value: '#7955ff', default: true }
         ]
     })
-    .add('default', () => <Image src={require('./test.jpg')} />);
+    .add('default', () => <Button text="Hello World!" />);
