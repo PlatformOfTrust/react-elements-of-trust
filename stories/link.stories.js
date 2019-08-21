@@ -3,9 +3,9 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Image from './../src/Components/Image/component';
+import Links from './../src/Components/Link/component';
 
-storiesOf('Image', module)
+storiesOf('Links', module)
     .addParameters({
         backgrounds: [
             { name: 'light', value: '#fffef0' },
@@ -13,4 +13,4 @@ storiesOf('Image', module)
             { name: 'purple', value: '#7955ff', default: true }
         ]
     })
-    .add('default', () => <Image src={require('./Images/test-image.jpg')} />);
+    .add('default', () => <Links label={'This is a link'} href={'#'} />);

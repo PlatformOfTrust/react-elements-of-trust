@@ -3,7 +3,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Image from './../src/Components/Image/component';
+import HexImg from './../src/Components/HexImage/component';
 
 storiesOf('Image', module)
     .addParameters({
@@ -13,4 +13,4 @@ storiesOf('Image', module)
             { name: 'purple', value: '#7955ff', default: true }
         ]
     })
-    .add('default', () => <Image src={require('./Images/test-image.jpg')} />);
+    .add('default', () => <HexImg src={require('./Images/test-image.jpg')} />);
