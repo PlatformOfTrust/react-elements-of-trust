@@ -30,7 +30,7 @@ import {Tab} from 'react-elements-of-trust';
 
 ### Troubleshooting
 
-If after adding rect component, there are errors related to react runtime. Try to match react versions in your app with react-elements-of-trust:
+If after adding react-element-of-trust component, there are errors related to react runtime. Try to match react versions in your app with react-elements-of-trust:
 
 ````
    "react": "16.8.6",
