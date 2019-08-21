@@ -25,8 +25,18 @@ import {Button} from 'react-elements-of-trust';
 import {Image} from 'react-elements-of-trust';
 import {Tabs} from 'react-elements-of-trust';
 import {Tab} from 'react-elements-of-trust';
+// and so on ...
 ```
 
+### Troubleshooting
+
+If after adding rect component, there are errors related to react runtime. Try to match react versions in your app with react-elements-of-trust:
+
+````
+   "react": "16.8.6",
+   react-bootstrap": "1.0.0-beta.9",
+   "react-dom": "16.8.6",
+```
 
 ## Development
 
