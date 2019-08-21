@@ -7,6 +7,9 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = require('react');
 var React__default = _interopDefault(React);
 var reactBootstrap = require('react-bootstrap');
+var Breadcrumb = _interopDefault(require('react-bootstrap/Breadcrumb'));
+var Form = _interopDefault(require('react-bootstrap/Form'));
+var Nav = _interopDefault(require('react-bootstrap/Nav'));
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -118,29 +121,6 @@ function (_Component) {
   return Button;
 }(React.Component);
 
-var Image =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Image, _Component);
-
-  function Image() {
-    _classCallCheck(this, Image);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Image).apply(this, arguments));
-  }
-
-  _createClass(Image, [{
-    key: "render",
-    value: function render() {
-      return React__default.createElement(reactBootstrap.Image, _extends({}, this.props, {
-        className: "image-of-trust"
-      }));
-    }
-  }]);
-
-  return Image;
-}(React.Component);
-
 var Tab =
 /*#__PURE__*/
 function (_Component) {
@@ -187,7 +167,292 @@ function (_Component) {
   return Tabs;
 }(React.Component);
 
+var Image =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Image, _Component);
+
+  function Image() {
+    _classCallCheck(this, Image);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Image).apply(this, arguments));
+  }
+
+  _createClass(Image, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(reactBootstrap.Image, _extends({}, this.props, {
+        className: "image-of-trust"
+      }));
+    }
+  }]);
+
+  return Image;
+}(React.Component);
+
+var Breadcrumbs =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Breadcrumbs, _Component);
+
+  function Breadcrumbs(props) {
+    var _this;
+
+    _classCallCheck(this, Breadcrumbs);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Breadcrumbs).call(this, props));
+    _this.state = {
+      items: []
+    };
+    return _this;
+  }
+
+  _createClass(Breadcrumbs, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      if (!this.props.items) {
+        var items = [];
+        var location = window.location.pathname;
+        var directory = '/';
+        var links = location.split('/').map(function (link) {
+          var completeLink = directory + link;
+          return completeLink;
+        });
+        var labels = location.split('/').map(function (item) {
+          var itemSplit = item.split('-').join(' ');
+          return itemSplit;
+        });
+
+        for (var i = 0; i < labels.length; i++) {
+          var item = {
+            label: labels[i],
+            href: links[i]
+          };
+          items.push(item);
+        }
+
+        this.setState({
+          items: items
+        });
+      } else {
+        this.setState({
+          items: this.props.items
+        });
+      }
+    }
+  }, {
+    key: "capitalizeFirstLetter",
+    value: function capitalizeFirstLetter(string) {
+      var result = string.split(' ').map(function (word) {
+        if (typeof word[0] === 'string') {
+          word = word.charAt(0).toUpperCase() + word.substr(1);
+          return word;
+        }
+      }).join(' ');
+      return result;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var items = this.state.items;
+      return React__default.createElement(Breadcrumb, null, items.map(function (item) {
+        return items.indexOf(item) === items.length - 1 ? React__default.createElement(Breadcrumb.Item, {
+          active: true
+        }, item.label === '' ? 'Home' : _this2.capitalizeFirstLetter(item.label)) : React__default.createElement(Breadcrumb.Item, {
+          href: String(item.href)
+        }, item.label === '' ? 'Home' : _this2.capitalizeFirstLetter(item.label));
+      }));
+    }
+  }]);
+
+  return Breadcrumbs;
+}(React.Component);
+
+var FormGroup =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(FormGroup, _Component);
+
+  function FormGroup() {
+    _classCallCheck(this, FormGroup);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(FormGroup).apply(this, arguments));
+  }
+
+  _createClass(FormGroup, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(Form.Group, {
+        controlId: this.props.controlId
+      }, React__default.createElement(Form.Label, null, this.props.label), React__default.createElement(Form.Control, {
+        type: this.props.type,
+        placeholder: this.props.placeholder
+      }), React__default.createElement(Form.Text, {
+        className: "text-muted"
+      }, this.props.muted !== undefined ? this.props.muted : ''));
+    }
+  }]);
+
+  return FormGroup;
+}(React.Component);
+
+var HexImg =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(HexImg, _Component);
+
+  function HexImg() {
+    _classCallCheck(this, HexImg);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(HexImg).apply(this, arguments));
+  }
+
+  _createClass(HexImg, [{
+    key: "render",
+    value: function render() {
+      var imgStyle = {
+        backgroundImage: "url('".concat(this.props.url, "')"),
+        transform: "rotate(10deg) scale(".concat(this.props.scale, ")")
+      };
+      return React__default.createElement("div", {
+        className: "hexagon",
+        style: imgStyle
+      }, React__default.createElement("div", {
+        className: "hexTop"
+      }), React__default.createElement("div", {
+        className: "hexBottom"
+      }));
+    }
+  }]);
+
+  return HexImg;
+}(React.Component);
+
+var Links =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Links, _Component);
+
+  function Links() {
+    _classCallCheck(this, Links);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Links).apply(this, arguments));
+  }
+
+  _createClass(Links, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement("a", this.props, this.props.label);
+    }
+  }]);
+
+  return Links;
+}(React.Component);
+
+var ExtNavBarItem =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ExtNavBarItem, _Component);
+
+  function ExtNavBarItem() {
+    _classCallCheck(this, ExtNavBarItem);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ExtNavBarItem).apply(this, arguments));
+  }
+
+  _createClass(ExtNavBarItem, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(Nav.Item, null, React__default.createElement(Links, this.props));
+    }
+  }]);
+
+  return ExtNavBarItem;
+}(React.Component);
+
+var NavBarItem =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(NavBarItem, _Component);
+
+  function NavBarItem() {
+    _classCallCheck(this, NavBarItem);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavBarItem).apply(this, arguments));
+  }
+
+  _createClass(NavBarItem, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(Nav.Item, null, React__default.createElement(Links, this.props));
+    }
+  }]);
+
+  return NavBarItem;
+}(React.Component);
+
+var ExtNavBar =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ExtNavBar, _Component);
+
+  function ExtNavBar() {
+    _classCallCheck(this, ExtNavBar);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ExtNavBar).apply(this, arguments));
+  }
+
+  _createClass(ExtNavBar, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(Nav, this.props, this.props.children);
+    }
+  }]);
+
+  return ExtNavBar;
+}(React.Component);
+
+/*       */
+var index = {
+  NavBar: ExtNavBar,
+  NavBarItem: ExtNavBarItem
+};
+
+var NavBar =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(NavBar, _Component);
+
+  function NavBar() {
+    _classCallCheck(this, NavBar);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavBar).apply(this, arguments));
+  }
+
+  _createClass(NavBar, [{
+    key: "render",
+    value: function render() {
+      return React__default.createElement(Nav, this.props, this.props.children);
+    }
+  }]);
+
+  return NavBar;
+}(React.Component);
+
+var index$1 = {
+  NavBar: NavBar,
+  NavBarItem: NavBarItem
+};
+
+exports.Breadcrumb = Breadcrumbs;
 exports.Button = Button;
+exports.ExtNavBar = index;
+exports.FormGroup = FormGroup;
+exports.HexImage = HexImg;
 exports.Image = Image;
+exports.Link = Links;
+exports.NavBar = index$1;
 exports.Tab = Tab;
 exports.Tabs = Tabs;
