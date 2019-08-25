@@ -119,3 +119,6 @@ Also it is recommended to configure your IDE to run flow while you are writing c
 *corporate images* and *logos* (`*.jpeg`, `*.jpg`, `*.png`, `*.svg`, etc.); *information* about the organization (`*.doc`, `*.docx`, `*.odt`, `*.pdf`, `*.ppt`, `*.pptx`, `*.pps`, `*.txt`, etc.); etc. is restricted and can be used only with express written consent from *Platform Of Trust Oy*.
 
 2. The usage of assets of types `.js` and `.scss` in `src` folder is licensed under MIT.
+
+3. For usage rights of the logos, contact:
+**Pirkko Laitinen**, marketing manager / Platform of Trust. Phone: +35840-512-3836
