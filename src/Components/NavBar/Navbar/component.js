@@ -1,7 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav';
-import NavBarItem from '../NavBarItem/component';
+import NavBarItem from './../NavBarItem/component';
 
 import './style.scss';
 
