@@ -1,4 +1,6 @@
+/* @flow */
 import React, { Component } from 'react';
+import './style.scss';
 
 type LinkProps = {
     label: string
@@ -6,7 +8,11 @@ type LinkProps = {
 
 class Links extends Component<LinkProps> {
     render() {
-        return <a {...this.props}>{this.props.label}</a>;
+        return (
+            <a className="link-of-trust" {...this.props}>
+                {this.props.label}
+            </a>
+        );
     }
 }
 

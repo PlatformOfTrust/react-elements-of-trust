@@ -1,9 +1,14 @@
+/* @flow */
 import React, { Component } from 'react';
 import Links from '../../Link/component';
 import Nav from 'react-bootstrap/Nav';
 
-class NavBarItem extends Component<ItemProps> {
-    render(): Node {
+type LinkProps = {
+    label: string
+};
+
+class NavBarItem extends Component<LinkProps> {
+    render(): Nav.Item {
         return (
             <Nav.Item>
                 <Links {...this.props} />

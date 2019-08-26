@@ -1,17 +1,18 @@
+/* @flow */
 import React, { Component } from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import './style.scss';
 
 type BreadProps = {
     items: Array<{ label: string, href: string }>
 };
 
 type BreadState = {
-    labels: Array<string>,
-    links: Array<string>
+    items: Array<{ label: string, href: string }>
 };
 
 class Breadcrumbs extends Component<BreadProps, BreadState> {
-    constructor(props) {
+    constructor(props: BreadProps) {
         super(props);
         this.state = {
             items: []
@@ -65,20 +66,26 @@ class Breadcrumbs extends Component<BreadProps, BreadState> {
         return result;
     }
 
-    render(): Node {
+    render(): Breadcrumb {
         const items: Array<{ label: string, href: string }> = this.state.items;
 
         return (
-            <Breadcrumb>
+            <Breadcrumb className="breadcrumb-of-trust">
                 {items.map((item, key) => {
                     return items.indexOf(item) === items.length - 1 ? (
-                        <Breadcrumb.Item active>
+                        <Breadcrumb.Item
+                            active
+                            className="breadcrumb-item-active"
+                        >
                             {item.label === ''
                                 ? 'Home'
                                 : this.capitalizeFirstLetter(item.label)}
                         </Breadcrumb.Item>
                     ) : (
-                        <Breadcrumb.Item href={String(item.href)}>
+                        <Breadcrumb.Item
+                            className="breadcrumb-item"
+                            href={String(item.href)}
+                        >
                             {item.label === ''
                                 ? 'Home'
                                 : this.capitalizeFirstLetter(item.label)}

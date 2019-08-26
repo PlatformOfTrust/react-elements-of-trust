@@ -8,12 +8,12 @@ import FormGroup from './../src/Components/FormGroup/component';
 storiesOf('FormGroup', module)
     .addParameters({
         backgrounds: [
-            { name: 'light', value: '#fffef0' },
+            { name: 'light', value: '#fffef0', default: true },
             { name: 'dark', value: '#1e3b47' },
-            { name: 'purple', value: '#7955ff', default: true }
+            { name: 'purple', value: '#7955ff' }
         ]
     })
-    .add('default', () => (
+    .add('formGroup', () => (
         <FormGroup
             controlId={'formid'}
             muted={'this should be muted'}

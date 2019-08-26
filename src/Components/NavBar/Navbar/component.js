@@ -1,16 +1,21 @@
+/* @flow */
 import React, { Component } from 'react';
-
 import Nav from 'react-bootstrap/Nav';
+import NavBarItem from '../NavBarItem/component';
 
-import { NavBarItem } from '../NavbarItem/component';
+import './style.scss';
 
 type NavBarProps = {
     children: Array<NavBarItem>
 };
 
 class NavBar extends Component<NavBarProps> {
-    render(): Node {
-        return <Nav {...this.props}>{this.props.children}</Nav>;
+    render(): Nav {
+        return (
+            <Nav className="navbar-of-trust" {...this.props}>
+                {this.props.children}
+            </Nav>
+        );
     }
 }
 

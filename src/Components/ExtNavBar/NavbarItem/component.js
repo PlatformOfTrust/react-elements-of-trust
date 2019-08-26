@@ -1,9 +1,14 @@
+/* @flow */
 import React, { Component } from 'react';
 import Links from '../../Link/component';
 import Nav from 'react-bootstrap/Nav';
 
-class ExtNavBarItem extends Component {
-    render(): Node {
+type LinkProps = {
+    label: string
+};
+
+class ExternalNavBarItem extends Component<LinkProps> {
+    render(): Nav.Item {
         return (
             <Nav.Item>
                 <Links {...this.props} />
@@ -12,4 +17,4 @@ class ExtNavBarItem extends Component {
     }
 }
 
-export default ExtNavBarItem;
+export default ExternalNavBarItem;

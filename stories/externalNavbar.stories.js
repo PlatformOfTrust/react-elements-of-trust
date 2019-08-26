@@ -3,18 +3,18 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import ExtNavBar from './../src/Components/ExtNavBar/Navbar/component';
-import ExtNavBarItem from './../src/Components/ExtNavBar/NavbarItem/component';
+import ExtNavBar from './../src/Components/ExtNavBar/NavBar/component';
+import ExtNavBarItem from './../src/Components/ExtNavBar/NavBarItem/component';
 
-storiesOf('ExtNavbar', module)
+storiesOf('ExternalNavbar', module)
     .addParameters({
         backgrounds: [
-            { name: 'light', value: '#fffef0' },
+            { name: 'light', value: '#fffef0', default: true },
             { name: 'dark', value: '#1e3b47' },
-            { name: 'purple', value: '#7955ff', default: true }
+            { name: 'purple', value: '#7955ff' }
         ]
     })
-    .add('default', () => (
+    .add('externalNavBar', () => (
         <ExtNavBar>
             <ExtNavBarItem label={'link1'} href={'#'} />
             <ExtNavBarItem label={'link2'} href={'#'} />

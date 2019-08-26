@@ -46,3 +46,6 @@ $fs-default: $fs-value * $fs-scale;
 $padding-vertical: $PADDING 0;
 $padding: $PADDING $PADDING * 2;
 
+body {
+    font-family: 'Fira Sans', sans-serif !important;
+}
