@@ -3,8 +3,8 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import ExtNavBar from './../src/Components/ExtNavBar/NavBar/component';
-import ExtNavBarItem from './../src/Components/ExtNavBar/NavBarItem/component';
+import ExtNavBar from './../src/Components/ExternalNavBar/NavBar/component';
+import ExtNavBarItem from './../src/Components/ExternalNavBar/NavBarItem/component';
 
 storiesOf('ExternalNavbar', module)
     .addParameters({
