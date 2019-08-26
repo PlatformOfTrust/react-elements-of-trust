@@ -3,7 +3,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import NavBar from './../src/Components/MainNavBar/NavBar/component';
+import MainNavBar from './../src/Components/MainNavBar/NavBar/component';
 import NavBarItem from './../src/Components/MainNavBar/NavBarItem/component';
 
 storiesOf('NavBar', module)
@@ -15,9 +15,9 @@ storiesOf('NavBar', module)
         ]
     })
     .add('navbar', () => (
-        <NavBar>
+        <MainNavBar>
             <NavBarItem label={'link1'} href={'#'} />
             <NavBarItem label={'link2'} href={'#'} />
             <NavBarItem label={'link3'} href={'#'} />
-        </NavBar>
+        </MainNavBar>
     ));

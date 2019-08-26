@@ -9,7 +9,7 @@ type NavBarProps = {
     children: Array<NavBarItem>
 };
 
-class NavBar extends Component<NavBarProps> {
+class MainNavBar extends Component<NavBarProps> {
     render(): Nav {
         return (
             <Nav className="navbar-of-trust" {...this.props}>
@@ -19,4 +19,4 @@ class NavBar extends Component<NavBarProps> {
     }
 }
 
-export default NavBar;
+export default MainNavBar;

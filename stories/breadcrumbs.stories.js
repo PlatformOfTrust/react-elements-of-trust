@@ -3,7 +3,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Breadcrumbs from './../src/Components/Breadcrumb/component';
+import Breadcrumbs from './../src/Components/Breadcrumbs/component';
 
 storiesOf('Breadcrumbs', module)
     .addParameters({
