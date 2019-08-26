@@ -3,8 +3,8 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import NavBar from './../src/Components/NavBar/NavBar/component';
-import NavBarItem from './../src/Components/NavBar/NavBarItem/component';
+import NavBar from './../src/Components/MainNavBar/NavBar/component';
+import NavBarItem from './../src/Components/MainNavBar/NavBarItem/component';
 
 storiesOf('NavBar', module)
     .addParameters({
