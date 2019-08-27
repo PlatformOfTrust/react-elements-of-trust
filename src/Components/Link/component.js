@@ -1,6 +1,5 @@
 /* @flow */
 import React, { Component } from 'react';
-import './style.scss';
 
 type LinkProps = {
     label: string

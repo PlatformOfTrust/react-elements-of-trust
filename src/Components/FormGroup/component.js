@@ -2,8 +2,6 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 
-import './style.scss';
-
 type FormProps = {
     controlId: String,
     muted?: string,

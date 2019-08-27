@@ -1,8 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
 
-import './styles.scss';
-
 type HexImageProps = {
     src: string,
     scale: string
