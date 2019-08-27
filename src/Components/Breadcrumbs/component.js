@@ -24,7 +24,7 @@ class Breadcrumbs extends Component<BreadProps, BreadState> {
             const location: string = window.location.pathname;
             let directory: string = '/';
 
-            const links = location.split('/').map((link, key) => {
+            const links = location.split('/').map(link => {
                 let completeLink: string = directory + link;
                 return completeLink;
             });
@@ -55,7 +55,7 @@ class Breadcrumbs extends Component<BreadProps, BreadState> {
     capitalizeFirstLetter(string: string): string {
         let result: string = string
             .split(' ')
-            .map((word, key) => {
+            .map(word => {
                 if (typeof word[0] === 'string') {
                     word = word.charAt(0).toUpperCase() + word.substr(1);
                     return word;
@@ -73,6 +73,7 @@ class Breadcrumbs extends Component<BreadProps, BreadState> {
                 {items.map((item, key) => {
                     return items.indexOf(item) === items.length - 1 ? (
                         <Breadcrumb.Item
+                            key={key}
                             active
                             className="breadcrumb-item-active"
                         >
@@ -82,6 +83,7 @@ class Breadcrumbs extends Component<BreadProps, BreadState> {
                         </Breadcrumb.Item>
                     ) : (
                         <Breadcrumb.Item
+                            key={key}
                             className="breadcrumb-item"
                             href={String(item.href)}
                         >
