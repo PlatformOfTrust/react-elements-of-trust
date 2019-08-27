@@ -13,7 +13,3 @@ export {
 export { default as FormGroup } from './Components/FormGroup/component';
 export { default as HexImage } from './Components/HexImage/component';
 export { default as Links } from './Components/Link/component';
-
-// From index
-export { default as ExtNavBar } from './Components/ExtNavBar/index';
-export { default as NavBar } from './Components/NavBar/index';
