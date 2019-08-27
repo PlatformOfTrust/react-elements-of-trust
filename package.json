@@ -30,7 +30,10 @@
         "stylelint": "9.10.1",
         "stylelint-config-idiomatic-order": "5.0.0",
         "stylelint-order": "1.0.0",
-        "stylelint-scss": "3.3.1"
+        "stylelint-scss": "3.3.1",
+        "babel-eslint": "10.0.2",
+        "eslint": "6.2.1",
+        "eslint-plugin-react": "7.14.3"
     },
     "scripts": {
         "start": "start-storybook",
@@ -38,6 +41,9 @@
         "build-storybook": "build-storybook -c .storybook -o .out",
         "prettier": "prettier --check \"src/**/*.js\"",
         "format": "prettier --write \"src/**/*.js\"",
-        "lint": "stylelint src && flow && npm run prettier"
+        "flow": "flow",
+        "lint": "stylelint src && npm run flow check && npm run prettier && npm run eslint",
+        "eslint": "eslint src",
+        "eslint:fix": "eslint --fix src"
     }
 }

@@ -25,8 +25,18 @@ import {Button} from 'react-elements-of-trust';
 import {Image} from 'react-elements-of-trust';
 import {Tabs} from 'react-elements-of-trust';
 import {Tab} from 'react-elements-of-trust';
+// and so on ...
 ```
 
+### Troubleshooting
+
+If after adding react-element-of-trust component, there are errors related to react runtime. Try to match react versions in your app with react-elements-of-trust:
+
+````
+   "react": "16.8.6",
+   react-bootstrap": "1.0.0-beta.9",
+   "react-dom": "16.8.6",
+```
 
 ## Development
 
@@ -109,3 +119,6 @@ Also it is recommended to configure your IDE to run flow while you are writing c
 *corporate images* and *logos* (`*.jpeg`, `*.jpg`, `*.png`, `*.svg`, etc.); *information* about the organization (`*.doc`, `*.docx`, `*.odt`, `*.pdf`, `*.ppt`, `*.pptx`, `*.pps`, `*.txt`, etc.); etc. is restricted and can be used only with express written consent from *Platform Of Trust Oy*.
 
 2. The usage of assets of types `.js` and `.scss` in `src` folder is licensed under MIT.
+
+3. For usage rights of the logos, contact:
+**Pirkko Laitinen**, marketing manager / Platform of Trust. Phone: +35840-512-3836
