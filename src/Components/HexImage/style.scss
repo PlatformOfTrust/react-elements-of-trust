@@ -1,8 +1,9 @@
 @import './../../vars';
 
 .hexagon-container {
-    padding: $MARGIN;
-    margin: $MARGIN;
+    padding: $padding;
+    margin: $padding;
+    font-family: $default-font;
 }
 
 .hexagon {

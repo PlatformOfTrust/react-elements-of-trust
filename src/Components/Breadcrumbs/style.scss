@@ -1,6 +1,7 @@
 @import './../../vars';
 
 .breadcrumb-of-trust {
-    padding: $MARGIN;
-    margin: $MARGIN;
+    padding: $padding;
+    margin: $padding;
+    font-family: $default-font;
 }

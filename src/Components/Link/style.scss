@@ -7,7 +7,8 @@ $transition-duration-short: 0.5s;
 $transition-duration-long: 1s;
 
 .link-of-trust {
-    margin: $MARGIN;
+    margin: $padding;
+    font-family: $default-font;
 }
 
 .link-of-trust:link {
