@@ -214,7 +214,7 @@ function (_Component) {
         var items = [];
         var location = window.location.pathname;
         var directory = '/';
-        var links = location.split('/').map(function (link, key) {
+        var links = location.split('/').map(function (link) {
           var completeLink = directory + link;
           return completeLink;
         });
@@ -243,7 +243,7 @@ function (_Component) {
   }, {
     key: "capitalizeFirstLetter",
     value: function capitalizeFirstLetter(string) {
-      var result = string.split(' ').map(function (word, key) {
+      var result = string.split(' ').map(function (word) {
         if (typeof word[0] === 'string') {
           word = word.charAt(0).toUpperCase() + word.substr(1);
           return word;
@@ -261,9 +261,11 @@ function (_Component) {
         className: "breadcrumb-of-trust"
       }, items.map(function (item, key) {
         return items.indexOf(item) === items.length - 1 ? React__default.createElement(Breadcrumb.Item, {
+          key: key,
           active: true,
           className: "breadcrumb-item-active"
         }, item.label === '' ? 'Home' : _this2.capitalizeFirstLetter(item.label)) : React__default.createElement(Breadcrumb.Item, {
+          key: key,
           className: "breadcrumb-item",
           href: String(item.href)
         }, item.label === '' ? 'Home' : _this2.capitalizeFirstLetter(item.label));

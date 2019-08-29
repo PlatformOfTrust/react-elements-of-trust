@@ -1,46 +1,37 @@
 @import './../../vars';
 
 // Normal State
-$label-Dark-Text: #4729b3;
-$input-field-BG: #fff;
-$input-field-border: 1px solid #4729b3;
+$label-dark-text: #4729b3;
+$input-field-bg: #fff;
 $placeholder-text: #555;
 $description-text: #555;
 
-// Hover
-$input-field-border-hover: 1px solid #4729b3;
-$transition-duration-super-short: 0.15s;
-$transition: border-color 0.15s ease-in-out;
-
-// Active
-$label-Dark-Text-active: $primary-color;
-$input-field-border-active: 1px solid $primary-color;
-$box-shadow: 0 0 6px 3px $primary-color;
-$transition-active: border-color $transition-duration-super-short ease-in-out,
-    box-shadow $transition-duration-super-short ease-in-out;
-
 .form-group-of-trust {
-    padding: $MARGIN 0;
-    margin: $SIZE;
+    padding: $padding 0;
+    margin: $padding;
+    font-family: $default-font;
 
     .form-label-of-trust {
-        color: $label-Dark-Text;
+        color: $label-dark-text;
     }
 
     .form-input-of-trust {
-        border: $input-field-border;
+        border: 1px solid $label-dark-text;
         color: $placeholder-text;
 
         &:hover {
-            border: $input-field-border-hover;
-            transition: $transition;
+            border: 2px solid $label-dark-text;
+            transition: border-color 0.15s ease-in-out;
         }
 
         &:active {
-            border: $input-field-border-active;
-            box-shadow: $box-shadow;
-            color: $label-Dark-Text-active;
-            transition: $transition-active;
+            border: 1px solid $primary-color;
+            box-shadow: 0 0 6px 3px $primary-color;
+            color: $primary-color;
+            transition:
+                border-color $transition-duration-super-short
+                ease-in-out,
+                box-shadow $transition-duration-super-short ease-in-out;
         }
     }
 }

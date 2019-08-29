@@ -46,3 +46,11 @@ $fs-default: $fs-value * $fs-scale;
 /* PADDING AND MARGIN */
 $padding-vertical: $PADDING 0;
 $padding: $PADDING $PADDING * 2;
+
+/* FONTS */
+$default-font: 'Fira Sans', sans-serif !important;
+
+/* TRANSITION-DURATIONS */
+$transition-duration-super-short: 0.15s;
+$transition-duration-short: 0.5s;
+$transition-duration-long: 1s;
