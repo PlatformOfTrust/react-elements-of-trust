@@ -1,3 +1,4 @@
+/* @flow */
 import React, { Component } from 'react';
 
 type LinkProps = {
@@ -6,7 +7,11 @@ type LinkProps = {
 
 class Links extends Component<LinkProps> {
     render() {
-        return <a {...this.props}>{this.props.label}</a>;
+        return (
+            <a className="link-of-trust" {...this.props}>
+                {this.props.label}
+            </a>
+        );
     }
 }
 

@@ -1,3 +1,4 @@
+/* @flow */
 import React, { Component } from 'react';
 import { Button as Base } from 'react-bootstrap';
 
@@ -7,7 +8,7 @@ type ButtonProps = {
 };
 
 class Button extends Component<ButtonProps> {
-    render() {
+    render(): Base {
         return (
             <Base {...this.props} className="button-of-trust">
                 {this.props.text}

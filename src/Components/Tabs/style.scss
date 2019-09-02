@@ -1,15 +1,16 @@
-@import "./../../vars";
+@import './../../vars';
 
 .tabs-of-trust {
     display: flex;
     height: 65px;
     justify-content: space-between;
+    font-family: $default-font;
 }
 
 .tabs-of-trust a.active {
     position: relative;
     border: none;
-    color: $white !important;
+    color: $primary-color !important;
     font-weight: bold;
 
     &::after {
@@ -26,7 +27,7 @@
 }
 
 .tabs-of-trust a {
-    color: $white;
+    color: $primary-color;
 
     &:hover {
         border: none;

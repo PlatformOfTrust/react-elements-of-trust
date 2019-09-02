@@ -1,17 +1,18 @@
-@import "./../../vars";
+@import './../../vars';
 
 .button-of-trust {
-    width: 100%;
-    padding: 0.5rem 0;
+    width: 50%;
+    padding: $padding 0;
     border: 3px solid $white;
-    margin: 1rem 0;
-    background: transparent;
+    margin: $padding;
+    background: $primary-color;
     border-radius: 0;
     color: $white;
+    font-family: $default-font;
     transition: border-radius 0.25s;
 
     &:hover {
-        background: transparent;
+        background: $primary-color;
         border-color: $white;
         border-radius: 10px;
     }

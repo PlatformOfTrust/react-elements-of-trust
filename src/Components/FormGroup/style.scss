@@ -1,0 +1,37 @@
+@import './../../vars';
+
+// Normal State
+$label-dark-text: #4729b3;
+$input-field-bg: #fff;
+$placeholder-text: #555;
+$description-text: #555;
+
+.form-group-of-trust {
+    padding: $padding 0;
+    margin: $padding;
+    font-family: $default-font;
+
+    .form-label-of-trust {
+        color: $label-dark-text;
+    }
+
+    .form-input-of-trust {
+        border: 1px solid $label-dark-text;
+        color: $placeholder-text;
+
+        &:hover {
+            border: 2px solid $label-dark-text;
+            transition: border-color 0.15s ease-in-out;
+        }
+
+        &:active {
+            border: 1px solid $primary-color;
+            box-shadow: 0 0 6px 3px $primary-color;
+            color: $primary-color;
+            transition:
+                border-color $transition-duration-super-short
+                ease-in-out,
+                box-shadow $transition-duration-super-short ease-in-out;
+        }
+    }
+}

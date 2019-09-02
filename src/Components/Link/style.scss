@@ -1,0 +1,30 @@
+@import './../../vars';
+
+$link-color: #7955ff;
+$link-visited-color: #b5a1ff;
+$link-hover-color: #4729b3;
+$transition-duration-short: 0.5s;
+$transition-duration-long: 1s;
+
+.link-of-trust {
+    margin: $padding;
+    font-family: $default-font;
+}
+
+.link-of-trust:link {
+    color: $link-color;
+    text-decoration: none;
+    transition: color $transition-duration-short;
+}
+
+.link-of-trust:visited {
+    color: $link-visited-color;
+}
+
+.link-of-trust:hover {
+    color: $link-hover-color;
+}
+
+.link-of-trust:active {
+    text-decoration: underline;
+}

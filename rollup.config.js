@@ -11,17 +11,19 @@ export default {
     external: [
         'react',
         'react-bootstrap',
+        'react-bootstrap/Breadcrumb',
+        'react-bootstrap/Nav',
+        'react-bootstrap/Form',
         'react-dom'
     ],
     plugins: [
         flow({ all: true }),
-        copy([
-            { files: 'src/**/*.scss', dest: 'dist/scss' },
-        ], {verbose: true}),
+        copy([{ files: 'src/**/*.scss', dest: 'dist/scss' }], {
+            verbose: true
+        }),
         babel({
             exclude: 'node_modules/**',
             presets: ['@babel/env', '@babel/preset-react']
         })
     ]
 };
-

@@ -1,3 +1,11 @@
+@import './../../vars';
+
+.hexagon-container {
+    padding: $padding;
+    margin: $padding;
+    font-family: $default-font;
+}
+
 .hexagon {
     position: relative;
     width: 300px;
@@ -7,8 +15,8 @@
     background-size: auto 346.4102px;
 }
 
-.hexTop,
-.hexBottom {
+.hex-top,
+.hex-bottom {
     position: absolute;
     z-index: 1;
     left: 43.93px;
@@ -22,13 +30,13 @@
 }
 
 /* counter transform the bg image on the caps */
-.hexTop::after,
-.hexBottom::after {
+.hex-top::after,
+.hex-bottom::after {
     position: absolute;
     width: 300px;
     height: 173.20508075688775px;
     background: inherit;
-    content: "";
+    content: '';
     -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
     -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
     transform: rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
@@ -37,19 +45,19 @@
     transform-origin: 0 0;
 }
 
-.hexTop {
+.hex-top {
     top: -106.066px;
 }
 
-.hexTop::after {
+.hex-top::after {
     background-position: center top;
 }
 
-.hexBottom {
+.hex-bottom {
     bottom: -106.066px;
 }
 
-.hexBottom::after {
+.hex-bottom::after {
     background-position: center bottom;
 }
 
@@ -61,5 +69,5 @@
     width: 300px;
     height: 173.2051px;
     background: inherit;
-    content: "";
+    content: '';
 }

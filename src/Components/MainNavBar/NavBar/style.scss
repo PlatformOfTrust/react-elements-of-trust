@@ -1,0 +1,13 @@
+@import './../../../vars';
+
+.navbar-of-trust {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    padding: $padding 0;
+    border: 2px solid $primary-color-light;
+    margin: $padding;
+    background: $primary-color-light;
+    border-radius: 10px;
+    font-family: $default-font;
+}

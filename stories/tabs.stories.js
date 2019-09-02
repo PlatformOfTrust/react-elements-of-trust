@@ -8,12 +8,12 @@ import Tabs from './../src/Components/Tabs/component';
 storiesOf('Tabs', module)
     .addParameters({
         backgrounds: [
-            { name: 'light', value: '#fffef0' },
+            { name: 'light', value: '#fffef0', default: true },
             { name: 'dark', value: '#1e3b47' },
-            { name: 'purple', value: '#7955ff', default: true }
+            { name: 'purple', value: '#7955ff' }
         ]
     })
-    .add('default', () => (
+    .add('tabs', () => (
         <Tabs defaultActiveKey="tab" id="navigation-bar">
             <Tab title="Home" eventKey="home">
                 Test text for home.

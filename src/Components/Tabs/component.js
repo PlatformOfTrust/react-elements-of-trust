@@ -1,3 +1,4 @@
+/* @flow */
 import React, { Component } from 'react';
 import { Tabs as Base } from 'react-bootstrap';
 import Tab from '../Tab/component';
@@ -11,7 +12,7 @@ type TabsProps = {
 };
 
 class Tabs extends Component<TabsProps> {
-    render() {
+    render(): Base {
         return (
             <Base {...this.props} className="tabs-of-trust">
                 {this.props.children}

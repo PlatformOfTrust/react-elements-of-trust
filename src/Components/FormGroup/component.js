@@ -1,5 +1,5 @@
+/* @flow */
 import React, { Component } from 'react';
-
 import Form from 'react-bootstrap/Form';
 
 type FormProps = {
@@ -11,11 +11,17 @@ type FormProps = {
 };
 
 class FormGroup extends Component<FormProps> {
-    render() {
+    render(): Form.Group {
         return (
-            <Form.Group controlId={this.props.controlId}>
-                <Form.Label>{this.props.label}</Form.Label>
+            <Form.Group
+                className="form-group-of-trust"
+                controlId={this.props.controlId}
+            >
+                <Form.Label className="form-label-of-trust">
+                    {this.props.label}
+                </Form.Label>
                 <Form.Control
+                    className="form-input-of-trust"
                     type={this.props.type}
                     placeholder={this.props.placeholder}
                 />

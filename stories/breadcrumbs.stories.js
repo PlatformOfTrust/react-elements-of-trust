@@ -3,17 +3,17 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Breadcrumbs from './../src/Components/Breadcrumb/component';
+import Breadcrumbs from './../src/Components/Breadcrumbs/component';
 
 storiesOf('Breadcrumbs', module)
     .addParameters({
         backgrounds: [
-            { name: 'light', value: '#fffef0' },
+            { name: 'light', value: '#fffef0', default: true },
             { name: 'dark', value: '#1e3b47' },
-            { name: 'purple', value: '#7955ff', default: true }
+            { name: 'purple', value: '#7955ff' }
         ]
     })
-    .add('default', () => (
+    .add('breadcrumbs', () => (
         <div>
             Without props <Breadcrumbs /> <br />
             With props
