@@ -14,7 +14,6 @@ $transition-duration-long: 1s;
 .link-of-trust:link {
     color: $link-color;
     text-decoration: none;
-    -webkit-transition: color $transition-duration-short;
     transition: color $transition-duration-short;
 }
 
